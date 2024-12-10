@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using TodoApi;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("tododb");
+var connectionString = builder.Configuration.GetConnectionString("tododbclevercloud");
 
 builder.Services.AddDbContext<ToDoDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
